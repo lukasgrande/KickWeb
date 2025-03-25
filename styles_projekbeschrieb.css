@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'DIN';
+    src: url('Fonts/DIN-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+body {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'DIN', sans-serif;
+    color: #222;
+}
+
+.projektbeschreibung {
+    background: white;
+    padding: 30px;
+    border: 2px solid black;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .projektbeschreibung {
+        max-width: 90%;
+        padding: 20px;
+        
+    }
+}
