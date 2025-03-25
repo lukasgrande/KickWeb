@@ -15,32 +15,7 @@ body {
     overflow: hidden;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: black;
-    padding: 15px 0;
-    text-align: center;
-}
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
 
 
 @font-face {
@@ -67,7 +42,7 @@ nav ul li a {
     height: 100vh;
     gap: 2px;
     
-    animation: animate-columns 15s ease-in-out infinite;
+    animation: animate-columns 25s ease-in-out infinite;
     animation-delay: 4.5s;
 
     
@@ -87,23 +62,29 @@ nav ul li a {
    
 }
 
+/* Base cell styling with flip transition */
 .cell {
     transition: transform 0.6s, background-color 0.6s;
     cursor: pointer;
 }
 
+/* Hover effect for background color change */
 .cell:hover {
     filter: brightness(0.95);
 }
 
+/* Reset background color when flipped */
 .cell.flipped {
     color: transparent; /* Hide text */
     transform: rotateY(180deg);
 }
 
+/* Flip around the X-axis */
 .cell.flipped-x {
-    transform: rotateX(180deg); /* Flip around the X-axis */
+    transform: rotateX(180deg);
 }
+
+
 
 
 .grid > :nth-child(1) { }

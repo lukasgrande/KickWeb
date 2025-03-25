@@ -29,7 +29,7 @@ function adjustTextSize() {
     const cellWidth = cell.offsetWidth;
     const cellHeight = cell.offsetHeight;
     const textWidth = span.offsetWidth;
-    const textHeight = span.offsetHeight;
+    const textHeight = span.offsetHeight * 0.65;
 
     // Check if it's a rotated element
     const isRotated = span.classList.contains("rotated-text");
@@ -94,8 +94,24 @@ document.querySelectorAll(".grid > .cell").forEach((cell) => {
     return window.innerWidth <= 600; // Adjust based on actual iPhone breakpoints
   }
 
+  // Add a hover effect for background color change
+  cell.addEventListener("mouseenter", () => {
+    const colors = [
+      "red",
+      "blue",
+      "black",
+      "white",
+      "white",
+      "white",
+      "yellow",
+    ];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    cell.style.backgroundColor = randomColor;
+  });
+
+  // Event listener for cell click (flip logic)
   cell.addEventListener("click", () => {
-    const colors = ["red", "black", "yellow", "blue", "white"];
+    const colors = ["red", "blue", "black", "white", "yellow"];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
     if (hasText) {
