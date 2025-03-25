@@ -43,7 +43,7 @@ body {
     gap: 2px;
     
     animation: animate-columns 25s ease-in-out infinite;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
 
     
     will-change: grid-template-columns, grid-template-rows; /* Hint for optimization */
@@ -219,7 +219,7 @@ body {
         gap: 1px; /* Adjust spacing */
 
         animation: animate-columns-mobile 15s ease-in-out infinite;
-        animation-delay: 4.5s;
+        animation-delay: 1.5s;
 
         will-change: grid-template-columns, grid-template-rows;
     }
