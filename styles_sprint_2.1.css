@@ -43,7 +43,7 @@ body {
     gap: 2px;
     
     animation: animate-columns 25s ease-in-out infinite;
-    animation-delay: 4.5s;
+    animation-delay: 3s;
 
     
     will-change: grid-template-columns, grid-template-rows; /* Hint for optimization */
