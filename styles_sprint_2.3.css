@@ -32,8 +32,8 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Initial grid setup with 12 columns */
-    grid-template-rows: repeat(7, 1fr);    /* Initial grid setup with 7 rows */
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-rows: repeat(8, 1fr);    
     align-items: stretch;
     justify-items: stretch;
     background: #000000;
@@ -91,7 +91,7 @@ body {
 .grid > :nth-child(3) { }
 .grid > :nth-child(4) { }
 .grid > :nth-child(5) { }
-.grid > :nth-child(6) { }
+.grid > :nth-child(6) {grid-column: span 2 }
 .grid > :nth-child(7) { }
 .grid > :nth-child(8) { }
 .grid > :nth-child(9) { }
@@ -99,30 +99,28 @@ body {
 .grid > :nth-child(11) { }
 .grid > :nth-child(12) { }
 .grid > :nth-child(13) { }
-.grid > :nth-child(14) {grid-row: span 4;}
-.rotated-text {transform: rotate(-90deg);}
-.grid > :nth-child(15) { }
-.grid > :nth-child(16) { }
+.grid > :nth-child(14) {}
+.grid > :nth-child(15) {grid-column: span 3}
+.grid > :nth-child(16) {}
 .grid > :nth-child(17) { }
-.grid > :nth-child(18) {grid-row: span 2}
-.rotated-text2 {transform: rotate(90deg);}
-.grid > :nth-child(19) { grid-column: span 3;}
-.grid > :nth-child(20) { grid-row: span 4}
-.grid > :nth-child(21) { grid-row: span 3}
-.grid > :nth-child(22) { }
+.grid > :nth-child(18) {}
+.grid > :nth-child(19) {}
+.grid > :nth-child(20) { }
+.grid > :nth-child(21) {}
+.grid > :nth-child(22) {}
 .grid > :nth-child(23) { }
 .grid > :nth-child(24) { }
 .grid > :nth-child(25) { }
-.grid > :nth-child(26) { }
-.grid > :nth-child(27) { }
+.grid > :nth-child(26) {grid-column: span 5}
+.grid > :nth-child(27) {  }
 .grid > :nth-child(28) { }
 .grid > :nth-child(29) { }
 .grid > :nth-child(30) { }
-.grid > :nth-child(31) { }
-.grid > :nth-child(32) {grid-column: span 4;}
+.grid > :nth-child(31) {}
+.grid > :nth-child(32) {grid-column: span 3}
 .grid > :nth-child(33) { }
-.grid > :nth-child(34) { }
-.grid > :nth-child(35) { }
+.grid > :nth-child(34) {}
+.grid > :nth-child(35) {}
 .grid > :nth-child(36) { }
 .grid > :nth-child(37) { }
 .grid > :nth-child(38) { }
@@ -131,25 +129,28 @@ body {
 .grid > :nth-child(41) { }
 .grid > :nth-child(42) { }
 .grid > :nth-child(43) { }
-.grid > :nth-child(44) { }
+.grid > :nth-child(44) { grid-column: span 2}
 .grid > :nth-child(45) { }
-.grid > :nth-child(46) { }
-.grid > :nth-child(47) { }
-.grid > :nth-child(48) {grid-column: span 3;}
+.grid > :nth-child(46) {  }
+.grid > :nth-child(47) {}
+.grid > :nth-child(48) {}
 .grid > :nth-child(49) { }
 .grid > :nth-child(50) {}
 .grid > :nth-child(51) { }
-.grid > :nth-child(52) {grid-column: span 4;}
-.grid > :nth-child(53) { }
+.grid > :nth-child(52) { }
+.grid > :nth-child(53) {}
 .grid > :nth-child(54) { }
-.grid > :nth-child(55) { }
-.grid > :nth-child(56) {}
+.grid > :nth-child(55) {}
+.grid > :nth-child(56) {grid-column: span 3 }
 .grid > :nth-child(57) { }
 .grid > :nth-child(58) { }
-.grid > :nth-child(59) { }
+.grid > :nth-child(59) {}
 .grid > :nth-child(60) { }
 .grid > :nth-child(64) { }
 .grid > :nth-child(65) { }
+.grid > :nth-child(66) { }
+.grid > :nth-child(68) {grid-column: span 3 }
+.grid > :nth-child(76) {grid-column: span 3 }
 
 #intro-screen {
     position: fixed;
@@ -172,39 +173,41 @@ body {
 @keyframes animate-columns {
     0% {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     12.5% {
-        grid-template-columns: 1fr 6fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
+        grid-template-columns: 0.5fr 0.5fr 3fr 3fr 3fr 3fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 4fr 0.5fr 4fr 0.5fr 0.5fr;
     }
     25% {
-        grid-template-columns: 1fr 6fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
+        grid-template-columns: 0.5fr 0.5fr 3fr 3fr 3fr 3fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 4fr 0.5fr 4fr 0.5fr 0.5fr;
     }
     37.5% {
-        grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4fr;
-        grid-template-rows: 1fr 1fr 1fr 4fr 1fr 3fr 1fr;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 3fr 3fr 3fr 3fr 3fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 4fr 0.5fr 0.5fr 0.5fr 4fr 0.5fr;
     }
     50% {
-        grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4fr;
-        grid-template-rows: 1fr 1fr 1fr 4fr 1fr 3fr 1fr;
+        
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 3fr 3fr 3fr 3fr 3fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 4fr 0.5fr 0.5fr 0.5fr 4fr 0.5fr;
     }
     62.5% {
-        grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
-        grid-template-rows: 1fr 3fr 1fr 1fr 1fr 5fr 1fr;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 2fr 2fr 2fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 6fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 6fr;
     }
     75% {
-        grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
-        grid-template-rows: 1fr 3fr 1fr 1fr 1fr 5fr 1fr;
+        
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 2fr 2fr 2fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 6fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 6fr;
     }
     87.5% {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     100% {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     }
 }
 
